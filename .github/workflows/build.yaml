@@ -9,7 +9,6 @@ on:
     
 jobs:
   build:
-    if: github.repository_owner != 'br0sinski'
     runs-on: ubuntu-latest
 
     steps:
