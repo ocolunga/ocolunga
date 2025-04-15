@@ -24,6 +24,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Configure Git
+      run: |
+        git config --global user.name 'GitHub Actions'
+        git config --global user.email 'actions@github.com'
+
+    - name: Pull latest changes
+      run: git pull
+
     - name: Run update script
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -33,9 +41,6 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
-        git config --global user.name 'GitHub Actions'
-        git config --global user.email 'actions@github.com'
-        git pull
         git add README.md out/fetch.png
         git diff --quiet && git diff --staged --quiet || git commit -m "Update README"
         git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git
