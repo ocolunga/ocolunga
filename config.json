@@ -17,8 +17,9 @@
         "languages"
     ],
     "additional_info": "",
-    "preferred_color": "#2EA043",
+    "preferred_color": "green",
     "max_languages": 5,
     "append_automatic": true,
-    "exclude_orgainzations": true
+    "exclude_orgainzations": true,
+    "custom_image_url": "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/rabbit-face.png"
 }
