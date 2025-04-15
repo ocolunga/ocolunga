@@ -14,10 +14,13 @@
         "bytes_of_code",
         "created_at",
         "updated_at",
-        "languages"
+        "languages",
+        "total_commits",
+        "total_issues",
+        "total_prs"
     ],
     "additional_info": "",
-    "preferred_color": "#2EA043",
+    "preferred_color": "lightblue",
     "max_languages": 5,
     "append_automatic": true,
     "exclude_orgainzations": true
